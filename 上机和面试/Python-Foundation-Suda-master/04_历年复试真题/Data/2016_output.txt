@@ -1,0 +1,6 @@
+a,35
+function,15
+is,10
+can,10
+and,10
+as,10

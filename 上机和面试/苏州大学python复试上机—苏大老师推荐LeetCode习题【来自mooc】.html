@@ -1,0 +1,1554 @@
+<!doctype html>
+<html style='font-size:16px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>苏州大学python复试上机—苏大老师推荐LeetCode习题【来自mooc】</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#header-n2">苏州大学python复试上机—苏大老师推荐LeetCode习题【来自mooc】</a></span><span class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#header-n3">LeetCode</a></span><span class="md-toc-item md-toc-h3" data-ref="n4"><a class="md-toc-inner" href="#header-n4">953. 验证外星语词典 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n25"><a class="md-toc-inner" href="#header-n25">283. 移动零 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n37"><a class="md-toc-inner" href="#header-n37">1078. Bigram 分词 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#header-n56">1337. 方阵中战斗力最弱的 K 行 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n67"><a class="md-toc-inner" href="#header-n67">929. 独特的电子邮件地址 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#header-n79">883. 三维形体投影面积 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n104"><a class="md-toc-inner" href="#header-n104">575. 分糖果 [哈希表]</a></span><span class="md-toc-item md-toc-h3" data-ref="n113"><a class="md-toc-inner" href="#header-n113">118. 杨辉三角 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n121"><a class="md-toc-inner" href="#header-n121">509. 斐波那契数 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n133"><a class="md-toc-inner" href="#header-n133">521. 最长特殊序列 Ⅰ [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n142"><a class="md-toc-inner" href="#header-n142">821. 字符的最短距离 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n149"><a class="md-toc-inner" href="#header-n149">1002. 查找常用字符 [数组 哈希表]</a></span><span class="md-toc-item md-toc-h3" data-ref="n158"><a class="md-toc-inner" href="#header-n158">811. 子域名访问计数 [哈希表 字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n171"><a class="md-toc-inner" href="#header-n171">485. 最大连续1的个数 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n183"><a class="md-toc-inner" href="#header-n183">748. 最短完整词 [哈希表 字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n195"><a class="md-toc-inner" href="#header-n195">171. Excel表列序号 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n207"><a class="md-toc-inner" href="#header-n207">168. Excel表列名称</a></span><span class="md-toc-item md-toc-h3" data-ref="n219"><a class="md-toc-inner" href="#header-n219">922. 按奇偶排序数组 II [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n228"><a class="md-toc-inner" href="#header-n228">908. 最小差值 I [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n244"><a class="md-toc-inner" href="#header-n244">476. 数字的补数 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n252"><a class="md-toc-inner" href="#header-n252">905. 按奇偶排序数组 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n260"><a class="md-toc-inner" href="#header-n260">561. 数组拆分 I [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n270"><a class="md-toc-inner" href="#header-n270">面试题 01.01. 判定字符是否唯一 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n277"><a class="md-toc-inner" href="#header-n277">657. 机器人能否返回原点 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n287"><a class="md-toc-inner" href="#header-n287">832. 翻转图像 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n296"><a class="md-toc-inner" href="#header-n296">804. 唯一摩尔斯密码词 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n306"><a class="md-toc-inner" href="#header-n306">461. 汉明距离 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n314"><a class="md-toc-inner" href="#header-n314">1252. 奇数值单元格的数目 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n325"><a class="md-toc-inner" href="#header-n325">1323. 6 和 9 组成的最大数字 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n333"><a class="md-toc-inner" href="#header-n333">面试题17. 打印从1到最大的n位数 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n339"><a class="md-toc-inner" href="#header-n339">771. 宝石与石头 [哈希表]</a></span><span class="md-toc-item md-toc-h3" data-ref="n347"><a class="md-toc-inner" href="#header-n347">1046. 最后一块石头的重量 [堆 贪心算法]</a></span><span class="md-toc-item md-toc-h3" data-ref="n361"><a class="md-toc-inner" href="#header-n361">1287. 有序数组中出现次数超过25%的元素 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n374"><a class="md-toc-inner" href="#header-n374">941. 有效的山脉数组 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n387"><a class="md-toc-inner" href="#header-n387">1281. 整数的各位积和之差 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n399"><a class="md-toc-inner" href="#header-n399">888. 公平的糖果交换 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n420"><a class="md-toc-inner" href="#header-n420">409. 最长回文串 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n428"><a class="md-toc-inner" href="#header-n428">860. 柠檬水找零 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n450"><a class="md-toc-inner" href="#header-n450">844. 比较含退格的字符串 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n457"><a class="md-toc-inner" href="#header-n457">1276. 不浪费原料的汉堡制作方案 【贪心]</a></span><span class="md-toc-item md-toc-h3" data-ref="n471"><a class="md-toc-inner" href="#header-n471">263. 丑数 [数学]</a></span><span class="md-toc-item md-toc-h3" data-ref="n487"><a class="md-toc-inner" href="#header-n487">628. 三个数的最大乘积[数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n501"><a class="md-toc-inner" href="#header-n501">824. 山羊拉丁文 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n525"><a class="md-toc-inner" href="#header-n525">925. 长按键入 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n545"><a class="md-toc-inner" href="#header-n545">1184. 公交站间的距离 [数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n570"><a class="md-toc-inner" href="#header-n570">35. 二分算法</a></span><span class="md-toc-item md-toc-h3" data-ref="n572"><a class="md-toc-inner" href="#header-n572">290. 单词规律 [字符串]</a></span><span class="md-toc-item md-toc-h3" data-ref="n585"><a class="md-toc-inner" href="#header-n585">914. 卡牌分组[数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n606"><a class="md-toc-inner" href="#header-n606">645. 错误的集合[数组]</a></span><span class="md-toc-item md-toc-h3" data-ref="n619"><a class="md-toc-inner" href="#header-n619">560. 和为K的子数组[数组 哈希表]</a></span></p></div><h1><a name='header-n2' class='md-header-anchor '></a>苏州大学python复试上机—苏大老师推荐LeetCode习题【来自mooc】</h1><h2><a name='header-n3' class='md-header-anchor '></a>LeetCode</h2><h3><a name='header-n4' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/verifying-an-alien-dictionary/'>953. 验证外星语词典</a> [字符串]</h3><p>某种外星语也使用英文小写字母，但可能顺序 <code>order</code> 不同。字母表的顺序（<code>order</code>）是一些小写字母的排列。</p><p>给定一组用外星语书写的单词 <code>words</code>，以及其字母表的顺序 <code>order</code>，只有当给定的单词在这种外星语中按字典序排列时，返回 <code>true</code>；否则，返回 <code>false</code>。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输入：words = ["hello","leetcode"], order = "hlabcdefgijkmnopqrstuvwxyz"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输出：true</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">解释：在该语言的字母表中，'h' 位于 'l' 之前，所以单词序列是按字典序排列的。</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div><div class="CodeMirror-gutters" style="display: none; height: 69px;"></div></div></div></pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输入：words = ["word","world","row"], order = "worldabcefghijkmnpqstuvxyz"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输出：false</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">解释：在该语言的字母表中，'d' 位于 'l' 之后，那么 words[0] &gt; words[1]，因此单词序列不是按字典序排列的。</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div><div class="CodeMirror-gutters" style="display: none; height: 92px;"></div></div></div></pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输入：words = ["apple","app"], order = "abcdefghijklmnopqrstuvwxyz"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输出：false</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">解释：当前三个字符 "app" 匹配时，第二个字符串相对短一些，然后根据词典编纂规则 "apple" &gt; "app"，因为 'l' &gt; '∅'，其中 '∅' 是空白字符，定义为比任何其他字符都小（更多信息）。</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div><div class="CodeMirror-gutters" style="display: none; height: 92px;"></div></div></div></pre><p><strong>提示：</strong></p><ol start='' ><li><code>1 &lt;= words.length &lt;= 100</code></li><li><code>1 &lt;= words[i].length &lt;= 20</code></li><li><code>order.length == 26</code></li><li>在 <code>words[i]</code> 和 <code>order</code> 中的所有字符都是英文小写字母。</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># -*- coding: utf-8 -*-</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">Solution</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">isAlienSorted</span>(<span class="cm-variable-2">self</span>, <span class="cm-variable">words</span>, <span class="cm-variable">order</span>) <span class="cm-operator">-&gt;</span> <span class="cm-builtin">bool</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">dic</span> = {}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">e</span> <span class="cm-keyword">in</span> <span class="cm-variable">order</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">dic</span>[<span class="cm-variable">e</span>] = <span class="cm-variable">dic</span>.<span class="cm-property">get</span>(<span class="cm-variable">e</span>, <span class="cm-number">0</span>) <span class="cm-operator">+</span> <span class="cm-variable">order</span>.<span class="cm-property">index</span>(<span class="cm-variable">e</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">wlen</span> = <span class="cm-builtin">len</span>(<span class="cm-variable">words</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">flag</span> = <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">i</span> <span class="cm-keyword">in</span> <span class="cm-builtin">range</span>(<span class="cm-number">0</span>, <span class="cm-variable">wlen</span>):</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">A</span> = <span class="cm-variable">words</span>[<span class="cm-variable">i</span>]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">Alen</span> = <span class="cm-builtin">len</span>(<span class="cm-variable">A</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">j</span> <span class="cm-keyword">in</span> <span class="cm-builtin">range</span>(<span class="cm-variable">i</span> <span class="cm-operator">+</span> <span class="cm-number">1</span>, <span class="cm-variable">wlen</span>):</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">B</span> = <span class="cm-variable">words</span>[<span class="cm-variable">j</span>]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">Blen</span> = <span class="cm-builtin">len</span>(<span class="cm-variable">B</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">mlen</span> = <span class="cm-variable">Alen</span> <span class="cm-keyword">if</span> <span class="cm-variable">Alen</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">Blen</span> <span class="cm-keyword">else</span> <span class="cm-variable">Blen</span> &nbsp; &nbsp; <span class="cm-comment"># 小的长度</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">k</span> <span class="cm-keyword">in</span> <span class="cm-builtin">range</span>(<span class="cm-variable">mlen</span>):</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  print(A[k], B[k])</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">dic</span>[<span class="cm-variable">A</span>[<span class="cm-variable">k</span>]] <span class="cm-operator">&lt;</span> <span class="cm-variable">dic</span>[<span class="cm-variable">B</span>[<span class="cm-variable">k</span>]]: &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">flag</span> = <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">break</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">elif</span> <span class="cm-variable">dic</span>[<span class="cm-variable">A</span>[<span class="cm-variable">k</span>]] <span class="cm-operator">&gt;</span> <span class="cm-variable">dic</span>[<span class="cm-variable">B</span>[<span class="cm-variable">k</span>]]:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-keyword">False</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">flag</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-keyword">True</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">else</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-keyword">False</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment"># return words == sorted(words, key=lambda w:[order.index(x) for x in w])</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">s</span> = <span class="cm-variable">Solution</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">isAlienSorted</span>(<span class="cm-variable">words</span>=[<span class="cm-string">"hello"</span>,<span class="cm-string">"leetcode"</span>], <span class="cm-variable">order</span>=<span class="cm-string">"hlabcdefgijkmnopqrstuvwxyz"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">isAlienSorted</span>(<span class="cm-variable">words</span> = [<span class="cm-string">"word"</span>,<span class="cm-string">"world"</span>,<span class="cm-string">"row"</span>], <span class="cm-variable">order</span> = <span class="cm-string">"worldabcefghijkmnpqstuvxyz"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">isAlienSorted</span>(<span class="cm-variable">words</span> = [<span class="cm-string">"apple"</span>,<span class="cm-string">"app"</span>], <span class="cm-variable">order</span> = <span class="cm-string">"abcdefghijklmnopqrstuvwxyz"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">isAlienSorted</span>([<span class="cm-string">"iekm"</span>,<span class="cm-string">"tpnhnbe"</span>], <span class="cm-string">"loxbzapnmstkhijfcuqdewyvrg"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">isAlienSorted</span>([<span class="cm-string">"fxasxpc"</span>,<span class="cm-string">"dfbdrifhp"</span>,<span class="cm-string">"nwzgs"</span>,<span class="cm-string">"cmwqriv"</span>,<span class="cm-string">"ebulyfyve"</span>,<span class="cm-string">"miracx"</span>,<span class="cm-string">"sxckdwzv"</span>,<span class="cm-string">"dtijzluhts"</span>,<span class="cm-string">"wwbmnge"</span>,<span class="cm-string">"qmjwymmyox"</span>]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">, <span class="cm-string">"zkgwaverfimqxbnctdplsjyohu"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">isAlienSorted</span>([<span class="cm-string">"kuvp"</span>,<span class="cm-string">"q"</span>], <span class="cm-string">"ngxlkthsjuoqcpavbfdermiywz"</span>))</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 943px;"></div><div class="CodeMirror-gutters" style="display: none; height: 943px;"></div></div></div></pre><h3><a name='header-n25' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/move-zeroes/'>283. 移动零</a> [数组]</h3><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p><p><strong>示例:</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输入: [0,1,0,3,12]</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输出: [1,3,12,0,0]</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><p><strong>说明</strong>:</p><ol start='' ><li>必须在原数组上操作，不能拷贝额外的数组。</li><li>尽量减少操作次数。</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">Solution</span>:</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">moveZeroes</span>(<span class="cm-variable-2">self</span>, <span class="cm-variable">nums</span>) <span class="cm-operator">-&gt;</span> <span class="cm-keyword">None</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">e</span> <span class="cm-keyword">in</span> <span class="cm-variable">nums</span>[::]:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">e</span> == <span class="cm-number">0</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">nums</span>.<span class="cm-property">remove</span>(<span class="cm-variable">e</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">nums</span>.<span class="cm-property">append</span>(<span class="cm-number">0</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">nums</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">s</span> = <span class="cm-variable">Solution</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">s</span>.<span class="cm-property">moveZeroes</span>([<span class="cm-number">0</span>, <span class="cm-number">1</span>, <span class="cm-number">0</span>, <span class="cm-number">3</span>, <span class="cm-number">12</span>]))</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 207px;"></div><div class="CodeMirror-gutters" style="display: none; height: 207px;"></div></div></div></pre><h3><a name='header-n37' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/occurrences-after-bigram/'>1078. Bigram 分词</a> [字符串]</h3><p>给出第一个词 <code>first</code> 和第二个词 <code>second</code>，考虑在某些文本 <code>text</code> 中可能以 &quot;<code>first second third</code>&quot; 形式出现的情况，其中 <code>second</code> 紧随 <code>first</code> 出现，<code>third</code> 紧随 <code>second</code> 出现。</p><p>对于每种这样的情况，将第三个词 &quot;<code>third</code>&quot; 添加到答案中，并返回答案。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输入：text = "alice is a good girl she is a good student", first = "a", second = "good"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输出：["girl","student"]</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输入：text = "we will we will rock you", first = "we", second = "will"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">输出：["we","rock"]</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><p><strong>提示：</strong></p><ol start='' ><li><code>1 &lt;= text.length &lt;= 1000</code></li><li><code>text</code> 由一些用空格分隔的单词组成，每个单词都由小写英文字母组成</li><li><code>1 &lt;= first.length, second.length &lt;= 10</code></li><li><code>first</code> 和 <code>second</code> 由小写英文字母组成</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n55" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def findOcurrences(self, text: str, first: str, second: str): #-&gt; List[str]:
+        words = text.split(' ')
+        res = []
+        
+        wlen = len(words)
+        for i in range(0, wlen - 2):
+            if words[i] == first and words[i + 1] == second:
+                res.append(words[i + 2])           
+        return res
+        
+s = Solution()
+print(s.findOcurrences(text = "alice is a good girl she is a good student", first = "a", second = "good"))
+print(s.findOcurrences(text = "we will we will rock you", first = "we", second = "will"))
+</pre><h3><a name='header-n56' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/the-k-weakest-rows-in-a-matrix/'>1337. 方阵中战斗力最弱的 K 行</a> [数组]</h3><p>给你一个大小为 <code>m * n</code> 的方阵 <code>mat</code>，方阵由若干军人和平民组成，分别用 1 和 0 表示。</p><p>请你返回方阵中战斗力最弱的 <code>k</code> 行的索引，按从最弱到最强排序。</p><p>如果第 <strong><em>i</em></strong> 行的军人数量少于第 <strong><em>j</em></strong> 行，或者两行军人数量相同但 <strong><em>i</em></strong> 小于 <strong><em>j</em></strong>，那么我们认为第 <strong><em>i</em></strong> 行的战斗力比第 <strong><em>j</em></strong> 行弱。</p><p>军人 <strong>总是</strong> 排在一行中的靠前位置，也就是说 1 总是出现在 0 之前。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n62" mdtype="fences">输入：mat = 
+[[1,1,0,0,0],        # 0
+ [1,1,1,1,0],          
+ [1,0,0,0,0],        # 2
+ [1,1,0,0,0],        # 3
+ [1,1,1,1,1]], 
+k = 3
+输出：[2,0,3]
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n64" mdtype="fences">输入：mat = 
+[[1,0,0,0],
+ [1,1,1,1],
+ [1,0,0,0],
+ [1,0,0,0]], 
+k = 2
+输出：[0,2]
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n66" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def kWeakestRows(self, mat, k: int): # -&gt; List[int]:
+        res = []
+        mlen = len(mat)
+        for i in range(mlen):
+            res.append((mat[i].count(1), i))
+            
+        res.sort(key=lambda x:x[0])   
+        res = [e[1] for e in res[:k]]
+        return res
+    
+s = Solution()
+print(s.kWeakestRows(mat = [[1,1,0,0,0],
+                            [1,1,1,1,0],
+                            [1,0,0,0,0],
+                            [1,1,0,0,0],
+                            [1,1,1,1,1]], k = 3))
+        
+print(s.kWeakestRows(mat = [[1,0,0,0],
+                            [1,1,1,1],
+                            [1,0,0,0],
+                            [1,0,0,0]], k = 2))
+</pre><h3><a name='header-n67' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/unique-email-addresses/'>929. 独特的电子邮件地址</a> [字符串]</h3><p>每封电子邮件都由一个本地名称和一个域名组成，以 @ 符号分隔。</p><p>例如，在 <code>alice@leetcode.com</code>中， <code>alice</code> 是本地名称，而 <code>leetcode.com</code> 是域名。</p><p>除了小写字母，这些电子邮件还可能包含 <code>&#39;.&#39;</code> 或 <code>&#39;+&#39;</code>。</p><p>如果在电子邮件地址的<strong>本地名称</strong>部分中的某些字符之间添加句点（<code>&#39;.&#39;</code>），则发往那里的邮件将会转发到本地名称中没有点的同一地址。例如，<code>&quot;alice.z@leetcode.com”</code> 和 <code>“alicez@leetcode.com”</code> 会转发到同一电子邮件地址。 （请注意，此规则不适用于域名。）</p><p>如果在<strong>本地名称</strong>中添加加号（<code>&#39;+&#39;</code>），则会忽略第一个加号后面的所有内容。这允许过滤某些电子邮件，例如 <code>m.y+name@email.com</code> 将转发到 <code>my@email.com</code>。 （同样，此规则不适用于域名。）</p><p>可以同时使用这两个规则。</p><p>给定电子邮件列表 <code>emails</code>，我们会向列表中的每个地址发送一封电子邮件。实际收到邮件的不同地址有多少？</p><p><strong>示例：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n76" mdtype="fences">输入：["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+输出：2
+解释：实际收到邮件的是 "testemail@leetcode.com" 和 "testemail@lee.tcode.com"。
+
+提示：
+1 &lt;= emails[i].length &lt;= 100
+1 &lt;= emails.length &lt;= 100
+每封 emails[i] 都包含有且仅有一个 '@' 字符。
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n78" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def numUniqueEmails(self, emails) -&gt; int:
+        import re
+        eset = set()   
+        for email in emails:
+            s = email.split('@')        
+            s = s[0].replace('.', '') + '@' + s[1] 
+            s = re.sub('\+.*@', '@', s)
+            eset.add(s)            
+        print(eset)
+        return len(eset)
+   
+s = Solution()
+print(s.numUniqueEmails(["test.email+alex@leetcode.com",
+                         "test.e.mail+bob.cathy@leetcode.com",
+                         "testemail+david@lee.tcode.com"]))
+</pre><h3><a name='header-n79' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/projection-area-of-3d-shapes/'>883. 三维形体投影面积</a> [数学]</h3><p>在 <code>N * N</code> 的网格中，我们放置了一些与 x，y，z 三轴对齐的 <code>1 * 1 * 1</code> 立方体。</p><p>每个值 <code>v = grid[i][j]</code> 表示 <code>v</code> 个正方体叠放在单元格 <code>(i, j)</code> 上。</p><p>现在，我们查看这些立方体在 xy、yz 和 zx 平面上的<em>投影</em>。</p><p>投影就像影子，将三维形体映射到一个二维平面上。</p><p>在这里，从顶部、前面和侧面看立方体时，我们会看到“影子”。</p><p>返回所有三个投影的总面积。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n87" mdtype="fences">输入：[[2]]
+输出：5
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n89" mdtype="fences">输入：[[1,2],[3,4]]
+输出：17
+解释：
+这里有该形体在三个轴对齐平面上的三个投影(“阴影部分”)。
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n91" mdtype="fences">输入：[[1,0],[0,2]]
+输出：8
+</pre><p><strong>示例 4：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n93" mdtype="fences">输入：[[1,1,1],[1,0,1],[1,1,1]]
+输出：14
+</pre><p><strong>示例 5：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n95" mdtype="fences">输入：[[2,2,2],[2,1,2],[2,2,2]]
+输出：21
+</pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= grid.length = grid[0].length &lt;= 50</code></li><li><code>0 &lt;= grid[i][j] &lt;= 50</code></li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n103" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def projectionArea(self, grid):
+        x_area = 0
+        for x in grid:
+            x = [e for e in x if e &gt; 0]
+            x_area += len(x)
+        
+        y_area = 0
+        elems = list(zip(*grid))
+        for e in elems:
+            y_area += max(e)
+            
+        z_area = 0
+        for e in grid:
+            z_area += max(e)
+        
+        areas = x_area + y_area + z_area
+        return areas
+
+s = Solution()
+print(s.projectionArea([[1,2], [3, 4]]))
+print(s.projectionArea([[1,0], [0,2]]))
+</pre><h3><a name='header-n104' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/distribute-candies/'>575. 分糖果</a> [哈希表]</h3><p>难度简单62</p><p>给定一个<strong>偶数</strong>长度的数组，其中不同的数字代表着不同种类的糖果，每一个数字代表一个糖果。你需要把这些糖果<strong>平均</strong>分给一个弟弟和一个妹妹。返回妹妹可以获得的最大糖果的种类数。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n108" mdtype="fences">输入: candies = [1,1,2,2,3,3]
+输出: 3
+解析: 一共有三种种类的糖果，每一种都有两个。
+     最优分配方案：妹妹获得[1,2,3],弟弟也获得[1,2,3]。这样使妹妹获得糖果的种类数最多。
+</pre><p><strong>示例 2 :</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n110" mdtype="fences">输入: candies = [1,1,2,3]
+输出: 2
+解析: 妹妹获得糖果[2,3],弟弟获得糖果[1,1]，妹妹有两种不同的糖果，弟弟只有一种。这样使得妹妹可以获得的糖果种类数最多。
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n112" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def distributeCandies(self, candies) -&gt; int:
+        clen = len(candies) 
+        ave = clen // 2
+        
+        cset = set()
+        for e in candies:
+            cset.add(e)
+            if len(cset) == ave:
+                break     
+#        print(cset)
+        return len(cset)
+    
+s = Solution()
+print(s.distributeCandies(candies = [1,1,2,2,3,3]))
+print(s.distributeCandies(candies = [1,1,2,3]))
+</pre><h3><a name='header-n113' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/pascals-triangle/'>118. 杨辉三角</a> [数组]</h3><p>给定一个非负整数 <em>numRows，</em>生成杨辉三角的前 <em>numRows</em> 行。</p><p><img src='https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif' alt='img' referrerPolicy='no-referrer' /></p><p>在杨辉三角中，每个数是它左上方和右上方的数的和。</p><p><strong>示例:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n118" mdtype="fences">输入: 5
+输出:
+[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n120" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def generate(self, numRows: int):
+        if numRows == 0:
+            return []
+        if numRows == 1:
+            return [[1]]
+        if numRows == 2:
+            return [[1], [1, 1]]
+        
+        res = [[] for i in range(numRows)]
+        res[0].append(1)
+        res[1] = [1, 1]
+        cnt = 1
+        for i in range(2, numRows):
+            res[i].append(1)
+            for j in range(cnt):
+                res[i].append(res[i-1][j] + res[i-1][j+1])
+            res[i].append(1)
+            cnt = cnt + 1
+
+        print(res)
+        return res
+             
+s = Solution()
+print(s.generate(2))
+print(s.generate(5))
+</pre><h3><a name='header-n121' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/fibonacci-number/'>509. 斐波那契数</a> [数组]</h3><p><strong>斐波那契数</strong>，通常用 <code>F(n)</code> 表示，形成的序列称为<strong>斐波那契数列</strong>。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n123" mdtype="fences">F(0) = 0,   F(1) = 1
+F(N) = F(N - 1) + F(N - 2), 其中 N &gt; 1.
+</pre><p>给定 <code>N</code>，计算 <code>F(N)</code>。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n126" mdtype="fences">输入：2
+输出：1
+解释：F(2) = F(1) + F(0) = 1 + 0 = 1.
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n128" mdtype="fences">输入：3
+输出：2
+解释：F(3) = F(2) + F(1) = 1 + 1 = 2.
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n130" mdtype="fences">输入：4
+输出：3
+解释：F(4) = F(3) + F(2) = 2 + 1 = 3.
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n132" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def fib(self, N: int) -&gt; int:
+        if N == 0:
+            return 0
+        elif N == 1:
+            return 1
+        
+        a, b = 0, 1
+        c = 0
+        for i in range(N-1):
+            c = a + b
+            a = b
+            b = c
+        return c
+    
+s = Solution()
+print(s.fib(2))
+print(s.fib(3))
+print(s.fib(4))
+</pre><h3><a name='header-n133' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/longest-uncommon-subsequence-i/'>521. 最长特殊序列 Ⅰ</a> [字符串]</h3><p>给定两个字符串，你需要从这两个字符串中找出最长的特殊序列。最长特殊序列定义如下：该序列为某字符串独有的最长子序列（即不能是其他字符串的子序列）。</p><p><strong>子序列</strong>可以通过删去字符串中的某些字符实现，但不能改变剩余字符的相对顺序。空序列为所有字符串的子序列，任何字符串为其自身的子序列。</p><p>输入为两个字符串，输出最长特殊序列的长度。如果不存在，则返回 -1。</p><p><strong>示例 :</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n138" mdtype="fences">输入: "aba", "cdc"
+输出: 3
+解析: 最长特殊序列可为 "aba" (或 "cdc")
+</pre><p><strong>说明:</strong> 两个字符串长度均小于100。字符串中的字符仅含有 &#39;a&#39;~&#39;z&#39;。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n141" mdtype="fences"># -*- coding: utf-8 -*-
+# 思路：A,B如果完全一样，输出就是 -1，如果不一样，那直接输出A,B中较长的字符串即可
+class Solution:
+    def findLUSlength(self, a: str, b: str) -&gt; int:
+        return max(len(a), len(b)) if a != b else -1
+    
+s = Solution()
+print(s.findLUSlength('aba', 'cdc'))
+</pre><h3><a name='header-n142' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/shortest-distance-to-a-character/'>821. 字符的最短距离</a> [字符串]</h3><p>给定一个字符串 <code>S</code> 和一个字符 <code>C</code>。返回一个代表字符串 <code>S</code> 中每个字符到字符串 <code>S</code> 中的字符 <code>C</code> 的最短距离的数组。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n145" mdtype="fences">输入: S = "loveleetcode", C = 'e'
+输出: [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0]
+</pre><p><strong>说明:</strong> 1. 字符串 <code>S</code> 的长度范围为 <code>[1, 10000]</code>。<code>C</code> 是一个单字符，且保证是字符串 <code>S</code> 里的字符。<code>S</code> 和 <code>C</code> 中的所有字母均为小写字母。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n148" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def shortestToChar(self, S: str, C: str):
+        index = [i for i in range(len(S)) if S[i] is C]
+        
+        res = []
+        slen = len(S)
+        for i in range(slen):
+            rmin = 100000
+            for j in index:
+                dis = abs(i - j)
+                if rmin &gt; dis:
+                    rmin = dis
+            res.append(rmin)                    
+        
+        print(res)
+        return res
+   
+s = Solution()
+print(s.shortestToChar(S = "loveleetcode", C = 'e'))
+</pre><h3><a name='header-n149' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/find-common-characters/'>1002. 查找常用字符</a> [数组 哈希表]</h3><p>给定仅有小写字母组成的字符串数组 <code>A</code>，返回列表中的每个字符串中都显示的全部字符（<strong>包括重复字符</strong>）组成的列表。例如，如果一个字符在每个字符串中出现 3 次，但不是 4 次，则需要在最终答案中包含该字符 3 次。</p><p>你可以按任意顺序返回答案。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n153" mdtype="fences">输入：["bella","label","roller"]
+输出：["e","l","l"]
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n155" mdtype="fences">输入：["cool","lock","cook"]
+输出：["c","o"]
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n157" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def commonChars(self, A):
+        res = list()       
+        for w in set(A[0]):                 # 遍历每个字符
+            cnt = [x.count(w) for x in A]   # 每个单词的 字符w 数量
+            a = w * min(cnt)
+            for i in a:                     # 防止不是全部都出现的，且分开添加
+                res.append(i)           
+        return res
+        
+s = Solution() 
+print(s.commonChars(["bella","label","roller"]))
+print(s.commonChars(["cool","lock","cook"]))
+</pre><h3><a name='header-n158' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/subdomain-visit-count/'>811. 子域名访问计数</a> [哈希表 字符串]</h3><p>一个网站域名，如&quot;discuss.leetcode.com&quot;，包含了多个子域名。作为顶级域名，常用的有&quot;com&quot;，下一级则有&quot;leetcode.com&quot;，最低的一级为&quot;discuss.leetcode.com&quot;。当我们访问域名&quot;discuss.leetcode.com&quot;时，也同时访问了其父域名&quot;leetcode.com&quot;以及顶级域名 &quot;com&quot;。</p><p>给定一个带访问次数和域名的组合，要求分别计算每个域名被访问的次数。其格式为访问次数+空格+地址，例如：&quot;9001 discuss.leetcode.com&quot;。</p><p>接下来会给出一组访问次数和域名组合的列表<code>cpdomains</code> 。要求解析出所有域名的访问次数，输出格式和输入格式相同，不限定先后顺序。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n162" mdtype="fences">示例 1:
+输入: 
+["9001 discuss.leetcode.com"]
+输出: 
+["9001 discuss.leetcode.com", "9001 leetcode.com", "9001 com"]
+
+示例 2
+输入: 
+["900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"]
+输出: 
+["901 mail.com","50 yahoo.com","900 google.mail.com","5 wiki.org","5 org","1 intel.mail.com","951 com"]
+</pre><p><strong>注意事项：</strong></p><ul><li><code>cpdomains</code> 的长度小于 <code>100</code>。每个域名的长度小于<code>100</code>。个域名地址包含一个或两个&quot;.&quot;符号。</li><li>输入中任意一个域名的访问次数都小于<code>10000</code>。</li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n170" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def subdomainVisits(self, cpdomains): 
+        if not cpdomains:
+            return []
+        
+        res = {}
+        for case in cpdomains:
+            time, domain = case.split()
+            length = len(domain.split('.'))
+            for num in range(length):
+                dm = domain.split('.', num)[-1]
+                res[dm] = res.get(dm, 0) + int(time)
+        return [str(v) + ' ' + k for k, v in res.items()]
+    
+s = Solution()
+print(s.subdomainVisits(["9001 discuss.leetcode.com"]))
+print(s.subdomainVisits(["900 google.mail.com", 
+                         "50 yahoo.com", 
+                         "1 intel.mail.com", 
+                         "5 wiki.org"]))
+# ["901 mail.com", "50 yahoo.com", "900 google.mail.com",
+#  "5 wiki.org","5 org", "1 intel.mail.com", "951 com"]
+# 说明: 按照假设，会访问"google.mail.com" 900次，"yahoo.com" 50次，
+# "intel.mail.com" 1次，"wiki.org" 5次。
+# 而对于父域名，会访问"mail.com" 900+1 = 901次，"com" 900 + 50 + 1 = 951次，和 "org" 5 次。
+</pre><h3><a name='header-n171' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/max-consecutive-ones/'>485. 最大连续1的个数</a> [数组]</h3><p>给定一个二进制数组， 计算其中最大连续1的个数。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n174" mdtype="fences">输入: [1,1,0,1,1,1]
+输出: 3
+解释: 开头的两位和最后的三位都是连续1，所以最大连续1的个数是 3.
+</pre><p><strong>注意：</strong></p><ul><li>输入的数组只包含 <code>0</code> 和<code>1</code>。</li><li>输入数组的长度是正整数，且不超过 10,000。</li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n182" mdtype="fences" style="break-inside: unset;">class Solution:
+    def findMaxConsecutiveOnes(self, nums) -&gt; int:
+        mcnt = 0
+        cnt = 0
+        for e in nums:
+            if mcnt &lt; cnt:
+                mcnt = cnt
+            if e == 1:
+                cnt += 1
+            elif e == 0:
+                cnt = 0
+        mcnt = cnt if cnt &gt; mcnt else mcnt
+        return mcnt
+
+s = Solution()
+print(s.findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]))
+</pre><h3><a name='header-n183' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/shortest-completing-word/'>748. 最短完整词</a> [哈希表 字符串]</h3><p>如果单词列表（<code>words</code>）中的一个单词包含牌照（<code>licensePlate</code>）中所有的字母，那么我们称之为完整词。在所有完整词中，最短的单词我们称之为最短完整词。</p><p>单词在匹配牌照中的字母时不区分大小写，比如牌照中的 <code>&quot;P&quot;</code> 依然可以匹配单词中的 <code>&quot;p&quot;</code> 字母。</p><p>我们保证一定存在一个最短完整词。当有多个单词都符合最短完整词的匹配条件时取单词列表中最靠前的一个。</p><p>牌照中可能包含多个相同的字符，比如说：对于牌照 <code>&quot;PP&quot;</code>，单词 <code>&quot;pair&quot;</code> 无法匹配，但是 <code>&quot;supper&quot;</code> 可以匹配。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n189" mdtype="fences">输入：licensePlate = "1s3 PSt", words = ["step", "steps", "stripe", "stepple"]
+输出："steps"
+说明：最短完整词应该包括 "s"、"p"、"s" 以及 "t"。对于 "step" 它只包含一个 "s" 所以它不符合条件。同时在匹配过程中我们忽略牌照中的大小写。
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n191" mdtype="fences">输入：licensePlate = "1s3 456", words = ["looks", "pest", "stew", "show"]
+输出："pest"
+说明：存在 3 个包含字母 "s" 且有着最短长度的完整词，但我们返回最先出现的完整词。
+</pre><p><strong>注意:</strong>  牌照<code>（licensePlate）</code>的长度在区域<code>[1, 7]</code>中。牌照<code>（licensePlate）</code>将会包含数字、空格、或者字母（大写和小写）。单词列表<code>（words）</code>长度在区间 <code>[10, 1000]</code> 中。每一个单词 <code>words[i]</code> 都是小写，并且长度在区间 <code>[1, 15]</code> 中。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n194" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def shortestCompletingWord(self, licensePlate: str, words) -&gt; str:
+        import re
+        awords = ''.join(re.findall('[a-zA-Z]+', licensePlate.lower()))
+        # 按 长度,索引 排序
+        words = sorted(words, key=lambda x:(len(x), words.index(x)))
+        for word in words:
+            for e in awords:
+#                print(awords, word, e, awords.count(e), word.count(e))
+				# 如果 word中没有e, awords中e数量 &gt; word中e数量
+                if e not in word or awords.count(e) &gt; word.count(e):
+                    break
+            else:
+                return word 
+s = Solution()
+print(s.shortestCompletingWord(licensePlate = "1s3 PSt", words = ["step", "steps", "stripe", "stepple"]))
+print(s.shortestCompletingWord(licensePlate = "1s3 456", words = ["looks", "pest", "stew", "show"]))
+print(s.shortestCompletingWord("GrC8950", 
+["measure","other","every","base","according","level","meeting","none","marriage","rest"]))
+print(s.shortestCompletingWord("1s3 456", ["looks","pest","stew","show"]))
+</pre><h3><a name='header-n195' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/excel-sheet-column-number/'>171. Excel表列序号</a> [数组]</h3><p>给定一个Excel表格中的列名称，返回其相应的列序号。</p><p>例如，</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n198" mdtype="fences">    A -&gt; 1
+    B -&gt; 2
+    C -&gt; 3
+    ...
+    Z -&gt; 26
+    AA -&gt; 27
+    AB -&gt; 28 
+    ...
+</pre><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n200" mdtype="fences">输入: "A"
+输出: 1
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n202" mdtype="fences">输入: "AB"
+输出: 28
+</pre><p><strong>示例 3:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n204" mdtype="fences">输入: "ZY"
+输出: 701
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n206" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def titleToNumber(self, s: str) -&gt; int:
+        dic = {}
+        for i in range(0, 26):
+            dic[chr(ord('A')+i)] = i + 1
+            
+        res = 0
+        slen = len(s)
+        for i in range(slen):
+            res += dic[s[i]] * 26**len(s[i+1:])
+        return res
+             
+s = Solution()
+print(s.titleToNumber('A'))
+print(s.titleToNumber('ZY'))      
+print(s.titleToNumber('AAA'))  
+</pre><h3><a name='header-n207' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/excel-sheet-column-title/'>168. Excel表列名称</a></h3><p>给定一个正整数，返回它在 Excel 表中相对应的列名称。</p><p>例如，</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n210" mdtype="fences">    1 -&gt; A
+    2 -&gt; B
+    3 -&gt; C
+    ...
+    26 -&gt; Z
+    27 -&gt; AA
+    28 -&gt; AB 
+    ...
+</pre><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n212" mdtype="fences">输入: 1
+输出: "A"
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n214" mdtype="fences">输入: 28
+输出: "AB"
+</pre><p><strong>示例 3:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n216" mdtype="fences">输入: 701
+输出: "ZY"
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n218" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+
+class Solution:
+    def convertToTitle(self, n: int) -&gt; str:
+       
+        dic = {}
+        for i in range(0, 25):
+            dic[i+1] = chr(ord('A')+i)
+        dic[0] = 'Z'
+            
+        res = ''
+        while n &gt; 0:
+            res += dic[n % 26]
+            if n % 26 != 0:
+                n = n // 26
+            else:
+                n = (n - 26) // 26
+        
+        return res[::-1]
+    
+s = Solution()
+print(s.convertToTitle(701))
+print(s.convertToTitle(52))
+</pre><h3><a name='header-n219' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/sort-array-by-parity-ii/'>922. 按奇偶排序数组 II</a> [数组]</h3><p>给定一个非负整数数组 <code>A</code>， A 中一半整数是奇数，一半整数是偶数。</p><p>对数组进行排序，以便当 <code>A[i]</code> 为奇数时，<code>i</code> 也是奇数；当 <code>A[i]</code> 为偶数时， <code>i</code> 也是偶数。</p><p>你可以返回任何满足上述条件的数组作为答案。</p><p><strong>示例：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n224" mdtype="fences">输入：[4,2,5,7]
+输出：[4,5,2,7]
+解释：[4,7,2,5]，[2,5,4,7]，[2,7,4,5] 也会被接受。
+</pre><p><strong>提示：</strong> <code>2 &lt;= A.length &lt;= 20000</code> ；<code>A.length % 2 == 0</code>； <code>0 &lt;= A[i] &lt;= 1000</code></p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n227" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def sortArrayByParityII(self, A):
+        Alen = len(A)
+        res = [0] * Alen
+        even, odd = 0, 1
+        for e in A:
+            if e % 2 == 0:
+                res[even] = e
+                even = even + 2
+            else:
+                res[odd] = e                
+                odd = odd + 2
+        print(res)
+        return res
+    
+s = Solution()
+print(s.sortArrayByParityII([4,2,5,7]))
+</pre><h3><a name='header-n228' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/smallest-range-i/'>908. 最小差值 I</a> [数学]</h3><p>给你一个整数数组 <code>A</code>，对于每个整数 <code>A[i]</code>，我们可以选择处于区间 <code>[-K, K]</code> 中的任意数 <code>x</code> ，将 <code>x</code> 与 <code>A[i]</code> 相加，结果存入 <code>A[i]</code> 。</p><p>在此过程之后，我们得到一些数组 <code>B</code>。</p><p>返回 <code>B</code> 的最大值和 <code>B</code> 的最小值之间可能存在的最小差值。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n233" mdtype="fences">输入：A = [1], K = 0
+输出：0
+解释：B = [1]
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n235" mdtype="fences">输入：A = [0,10], K = 2
+输出：6
+解释：B = [2,8]
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n237" mdtype="fences">输入：A = [1,3,6], K = 3
+输出：0
+解释：B = [3,3,3] 或 B = [4,4,4]
+</pre><p><strong>提示：</strong></p><ol start='' ><li><code>1 &lt;= A.length &lt;= 10000</code> <code>0 &lt;= A[i] &lt;= 10000</code>  <code>0 &lt;= K &lt;= 10000</code></li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n243" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def smallestRangeI(self, A, K: int) -&gt; int:
+#       数组中最小值和最大值相差大于两倍的K时，最小差值为最大值和最小值之差减两倍的K；
+#       当最小值和最大值相差小于或等于两倍的K时，最小差值为0。
+        return max(max(A) - min(A) - 2*K, 0)
+   
+s = Solution()
+print(s.smallestRangeI(A = [1], K = 0))
+print(s.smallestRangeI(A = [0,10], K = 2))
+print(s.smallestRangeI(A = [1,3,6], K = 3))
+</pre><h3><a name='header-n244' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/number-complement/'>476. 数字的补数</a> [数学]</h3><p>给定一个正整数，输出它的补数。补数是对该数的二进制表示取反。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n247" mdtype="fences">输入: 5
+输出: 2
+解释: 5 的二进制表示为 101（没有前导零位），其补数为 010。所以你需要输出 2 。
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n249" mdtype="fences">输入: 1
+输出: 0
+解释: 1 的二进制表示为 1（没有前导零位），其补数为 0。所以你需要输出 0 。
+</pre><p><strong>注意:</strong> 给定的整数保证在 32 位带符号整数的范围内。 你可以假定二进制数不包含前导零位。本题与 1009 <a href='https://leetcode-cn.com/problems/complement-of-base-10-integer/' target='_blank' class='url'>https://leetcode-cn.com/problems/complement-of-base-10-integer/</a> 相同</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n251" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def findComplement(self, num: int) -&gt; int:
+        nbin = bin(num)
+        
+        comp = '0b'
+        for e in nbin[2:]:
+            if e == '0':
+                comp += '1'
+            else:
+                comp += '0'
+        return int(comp, 2)
+
+s = Solution()
+print(s.findComplement(5))
+print(s.findComplement(1))
+</pre><h3><a name='header-n252' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/sort-array-by-parity/'>905. 按奇偶排序数组</a> [数组]</h3><p>给定一个非负整数数组 <code>A</code>，返回一个数组，在该数组中， <code>A</code> 的所有偶数元素之后跟着所有奇数元素。</p><p>你可以返回满足此条件的任何数组作为答案。</p><p><strong>示例：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n256" mdtype="fences">输入：[3,1,2,4]
+输出：[2,4,3,1]
+输出 [4,2,3,1]，[2,4,1,3] 和 [4,2,1,3] 也会被接受。
+</pre><p><strong>提示：</strong> <code>1 &lt;= A.length &lt;= 5000</code>   <code>0 &lt;= A[i] &lt;= 5000</code></p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n259" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def sortArrayByParity(self, A):
+        i, j = 0, len(A)-1
+        while i &lt; j:
+            while i &lt; j and A[i] % 2 == 0:
+                i = i + 1
+            if i &lt; j:
+                t = A[i]
+            while i &lt; j and A[j] % 2 == 1:
+                j = j - 1
+            if i &lt; j:
+                A[i] = A[j]
+                A[j] = t
+        print(A)
+        return A
+    
+s = Solution()
+print(s.sortArrayByParity([3, 1, 2, 4]))
+</pre><h3><a name='header-n260' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/array-partition-i/'>561. 数组拆分 I</a> [数组]</h3><p>给定长度为 <strong>2n</strong> 的数组, 你的任务是将这些数分成 <strong>n</strong> 对, 例如 (a1, b1), (a2, b2), ..., (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n263" mdtype="fences">输入: [1,4,3,2]
+
+输出: 4
+解释: n 等于 2, 最大总和为 4 = min(1, 2) + min(3, 4).
+</pre><p><strong>提示:</strong></p><ol start='' ><li><strong>n</strong> 是正整数,范围在 [1, 10000].  2. 数组中的元素范围在 [-10000, 10000].</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n269" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def arrayPairSum(self, nums) -&gt; int:
+        nums.sort()
+        print(nums)        
+        rlen = len(nums)
+        nums = [min(nums[i], nums[i+1]) for i in range(0, rlen-1, 2)]
+        return sum(nums)
+    
+s = Solution()
+print(s.arrayPairSum([1, 4, 3, 2]))
+</pre><h3><a name='header-n270' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/is-unique-lcci/'>面试题 01.01. 判定字符是否唯一</a> [数组]</h3><p>实现一个算法，确定一个字符串 <code>s</code> 的所有字符是否全都不同。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n273" mdtype="fences">输入: s = "leetcode"
+输出: false 
+
+输入: s = "abc"
+输出: true
+</pre><p><strong>限制：</strong> <code>0 &lt;= len(s) &lt;= 100</code>   2. 如果你不使用额外的数据结构，会很加分。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n276" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def isUnique(self, astr: str):
+        for e in astr:
+            if astr.count(e) &gt; 1:
+                return False
+        return True
+      
+s = Solution()
+print(s.isUnique('leetcode'))
+print(s.isUnique('abc'))
+</pre><h3><a name='header-n277' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/robot-return-to-origin/'>657. 机器人能否返回原点</a> [字符串]</h3><p>在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 <strong>(0, 0) 处结束</strong>。</p><p>移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 <code>R</code>（右），<code>L</code>（左），<code>U</code>（上）和 <code>D</code>（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。</p><p><strong>注意：</strong>机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n282" mdtype="fences">输入: "UD"
+输出: true
+解释：机器人向上移动一次，然后向下移动一次。所有动作都具有相同的幅度，因此它最终回到它开始的原点。因此，我们返回 true。
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n284" mdtype="fences">输入: "LL"
+输出: false
+解释：机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n286" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def judgeCircle(self, moves: str) -&gt; bool:
+		return moves.count('D')==moves.count('U') and moves.count('R')==moves.count
+       
+s = Solution()
+print(s.judgeCircle('UD'))
+print(s.judgeCircle('LL'))
+print(s.judgeCircle('RRDD'))
+</pre><h3><a name='header-n287' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/flipping-an-image/'>832. 翻转图像</a> [数组]</h3><p>给定一个二进制矩阵 <code>A</code>，我们想先水平翻转图像，然后反转图像并返回结果。</p><p>水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 <code>[1, 1, 0]</code> 的结果是 <code>[0, 1, 1]</code>。</p><p>反转图片的意思是图片中的 <code>0</code> 全部被 <code>1</code> 替换， <code>1</code> 全部被 <code>0</code> 替换。例如，反转 <code>[0, 1, 1]</code> 的结果是 <code>[1, 0, 0]</code>。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n292" mdtype="fences">输入: [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
+输出: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
+解释: 首先翻转每一行: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]；
+     然后反转图片: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
+</pre><p><strong>说明:</strong><code>1 &lt;= A.length = A[0].length &lt;= 20``0 &lt;= A[i][j] &lt;= 1</code></p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n295" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def flipAndInvertImage(self, A):
+        res = []
+        for li in A:
+            li.reverse()
+            rlen = len(li)
+            for i in range(rlen):
+                if li[i] == 0:
+                    li[i] = 1
+                else:
+                    li[i] = 0
+            res.append(li)      
+        return res
+       
+s = Solution()
+print(s.flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]))
+print(s.flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))
+</pre><h3><a name='header-n296' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/unique-morse-code-words/'>804. 唯一摩尔斯密码词</a> [字符串]</h3><p>国际摩尔斯密码定义一种标准编码方式，将每个字母对应于一个由一系列点和短线组成的字符串， 比如: <code>&quot;a&quot;</code> 对应 <code>&quot;.-&quot;</code>, <code>&quot;b&quot;</code> 对应 <code>&quot;-...&quot;</code>, <code>&quot;c&quot;</code> 对应 <code>&quot;-.-.&quot;</code>, 等等。</p><p>为了方便，所有26个英文字母对应摩尔斯密码表如下：</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n299" mdtype="fences">[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+</pre><p>给定一个单词列表，每个单词可以写成每个字母对应摩尔斯密码的组合。例如，&quot;cab&quot; 可以写成 &quot;-.-..--...&quot;，(即 &quot;-.-.&quot; + &quot;-...&quot; + &quot;.-&quot;字符串的结合)。我们将这样一个连接过程称作单词翻译。</p><p>返回我们可以获得所有词不同单词翻译的数量。</p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n302" mdtype="fences">例如:
+输入: words = ["gin", "zen", "gig", "msg"]
+输出: 2
+解释: 
+各单词翻译如下:
+"gin" -&gt; "--...-."
+"zen" -&gt; "--...-."
+"gig" -&gt; "--...--."
+"msg" -&gt; "--...--."
+
+共有 2 种不同翻译, "--...-." 和 "--...--.".
+</pre><p><strong>注意:</strong>   单词列表<code>words</code> 的长度不会超过 <code>100</code>。每个单词 <code>words[i]</code>的长度范围为 <code>[1, 12]</code>。每个单词 <code>words[i]</code>只包含小写字母。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n305" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def uniqueMorseRepresentations(self, words) -&gt; int:
+        import string
+        letters = string.ascii_lowercase
+        table = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        wlen = len(words)
+        T = []
+        for i in range(wlen):
+            str2 = ''
+            wl = len(words[i])
+            for j in range(wl):
+                k = letters.index(words[i][j])
+                str2 += table[k]
+            if str2 not in T:
+                T.append(str2)        
+        print(T)
+        return len(T)
+    
+s = Solution()
+print(s.uniqueMorseRepresentations(words = ["gin", "zen", "gig", "msg"]))
+</pre><h3><a name='header-n306' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/hamming-distance/'>461. 汉明距离</a> [数学]</h3><p>两个整数之间的<a href='https://baike.baidu.com/item/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB'>汉明距离</a>指的是这两个数字对应二进制位不同的位置的数目。</p><p>给出两个整数 <code>x</code> 和 <code>y</code>，计算它们之间的汉明距离。</p><p><strong>注意：</strong>  0 ≤ <code>x</code>, <code>y</code> &lt; 231.</p><p><strong>示例:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n311" mdtype="fences">输入: x = 1, y = 4
+输出: 2
+解释:
+1   (0 0 0 1)
+4   (0 1 0 0)
+       ↑   ↑
+上面的箭头指出了对应二进制位不同的位置。
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n313" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def hammingDistance(self, x: int, y: int) -&gt; int:
+        xbin = bin(x)[2:]
+        ybin = bin(y)[2:]       
+        print(xbin, ybin)
+        bmax = len(xbin) if len(xbin) &gt; len(ybin) else len(ybin)
+        
+        res = 0
+        xbin = ('{0:0'+str(1+bmax)+'d}').format(int(xbin))
+        ybin = ('{0:0'+str(1+bmax)+'d}').format(int(ybin))
+                
+        maxb = len(xbin)
+        for i in range(maxb):
+            if xbin[i] != ybin[i]:
+                res += 1
+        
+        print(res)
+        return res
+    	# return bin(x ^ y).count('1')
+
+s = Solution()
+print(s.hammingDistance(x=1, y=4)) 
+</pre><h3><a name='header-n314' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix/'>1252. 奇数值单元格的数目</a> [数组]</h3><p>给你一个 <code>n</code> 行 <code>m</code> 列的矩阵，最开始的时候，每个单元格中的值都是 <code>0</code>。</p><p>另有一个索引数组 <code>indices</code>，<code>indices[i] = [ri, ci]</code> 中的 <code>ri</code> 和 <code>ci</code> 分别表示指定的行和列（从 <code>0</code> 开始编号）。</p><p>你需要将每对 <code>[ri, ci]</code> 指定的行和列上的所有单元格的值加 <code>1</code>。</p><p>请你在执行完所有 <code>indices</code> 指定的增量操作后，返回矩阵中 「奇数值单元格」 的数目。</p><p><strong>示例 1：</strong></p><p><img src='https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/06/e1.png' alt='img' referrerPolicy='no-referrer' /></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n321" mdtype="fences">输入：n = 2, m = 3, indices = [[0,1],[1,1]]
+输出：6
+解释：最开始的矩阵是 [[0,0,0],[0,0,0]]。
+第一次增量操作后得到 [[1,2,1],[0,1,0]]。
+最后的矩阵是 [[1,3,1],[1,3,1]]，里面有 6 个奇数。
+</pre><p><strong>提示：</strong><code>1 &lt;= n &lt;= 50</code>  ;<code>1 &lt;= m &lt;= 50</code>; <code>1 &lt;= indices.length &lt;= 100</code> ;<code>0 &lt;= indices[i][0] &lt; n</code> ;<code>0 &lt;= indices[i][1] &lt; m</code></p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n324" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def oddCells(self, n, m, indices) -&gt; int:
+        ans = [[0]*m for i in range(n)]   
+        
+        for b in indices:
+            row = b[0]
+            col = b[1]
+            
+            cnt = len(ans[0])
+            for i in range(cnt):
+                ans[row][i] += 1
+                
+            cnt = len(ans)
+            for i in range(cnt):
+                ans[i][col] += 1
+            
+        ans = [e for ei in ans for e in ei if e % 2 == 1]
+        return len(ans)
+        
+s = Solution()
+print(s.oddCells(n = 2, m = 3, indices = [[0,1],[1,1]]))
+print(s.oddCells(n = 2, m = 2, indices = [[1,1],[0,0]]))
+print(s.oddCells(2, 2, [[1,1],[0,0]]))
+</pre><h3><a name='header-n325' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/maximum-69-number/'>1323. 6 和 9 组成的最大数字</a> [数学]</h3><p>给你一个仅由数字 6 和 9 组成的正整数 <code>num</code>。你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。</p><p>请返回你可以得到的最大数字。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n329" mdtype="fences">输入：num = 9669
+输出：9969
+解释：
+其中最大的数字是 9969 。
+</pre><p><strong>提示：</strong> <code>1 &lt;= num &lt;= 10^4</code> ； <code>num</code> 每一位上的数字都是 6 或者 9 。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n332" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def maximum69Number (self, num: int) -&gt; int:
+        num = str(num)
+        return num.replace('6', '9', 1)
+     
+s = Solution()
+print(s.maximum69Number(9669))
+</pre><h3><a name='header-n333' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/'>面试题17. 打印从1到最大的n位数</a> [数学]</h3><p>输入数字 <code>n</code>，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n336" mdtype="fences">输入: n = 1
+输出: [1,2,3,4,5,6,7,8,9]
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n338" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def printNumbers(self, n: int) :
+        res = list(range(1, 10**n))
+        return res
+    
+s = Solution()
+print(s.printNumbers(1))
+print(s.printNumbers(2)) 
+</pre><h3><a name='header-n339' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/jewels-and-stones/'>771. 宝石与石头</a> [哈希表]</h3><p> 给定字符串<code>J</code> 代表石头中宝石的类型，和字符串 <code>S</code>代表你拥有的石头。 <code>S</code> 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p><p><code>J</code> 中的字母不重复，<code>J</code> 和 <code>S</code>中的所有字符都是字母。字母区分大小写，因此<code>&quot;a&quot;</code>和<code>&quot;A&quot;</code>是不同类型的石头。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n343" mdtype="fences">输入: J = "aA", S = "aAAbbbb"
+输出: 3
+</pre><p><strong>注意:</strong>  <code>S</code> 和 <code>J</code> 最多含有50个字母。 <code>J</code> 中的字符不重复。</p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n346" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -&gt; int:
+        res = 0
+        for s in S:
+            if s in J:
+                res += 1
+        return res
+
+s = Solution()
+print(s.numJewelsInStones('aA', 'aAAbbbb'))
+print(s.numJewelsInStones('z', 'ZZ'))
+</pre><h3><a name='header-n347' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/last-stone-weight/'>1046. 最后一块石头的重量</a> [堆 贪心算法]</h3><p>有一堆石头，每块石头的重量都是正整数。</p><p>每一回合，从中选出两块 <strong>最重的</strong> 石头，然后将它们一起粉碎。假设石头的重量分别为 <code>x</code> 和 <code>y</code>，且 <code>x &lt;= y</code>。那么粉碎的可能结果如下：</p><ul><li>如果 <code>x == y</code>，那么两块石头都会被完全粉碎；</li><li>如果 <code>x != y</code>，那么重量为 <code>x</code> 的石头将会完全粉碎，而重量为 <code>y</code> 的石头新重量为 <code>y-x</code>。</li></ul><p>最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 <code>0</code>。</p><p><strong>示例：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n357" mdtype="fences">输入：[2,7,4,1,8,1]
+输出：1
+解释：
+先选出 7 和 8，得到 1，所以数组转换为 [2,4,1,1,1]，
+再选出 2 和 4，得到 2，所以数组转换为 [2,1,1,1]，
+接着是 2 和 1，得到 1，所以数组转换为 [1,1,1]，
+最后选出 1 和 1，得到 0，最终数组转换为 [1]，这就是最后剩下那块石头的重量。
+</pre><p><strong>提示：</strong> <code>1 &lt;= stones.length &lt;= 30</code>；<code>1 &lt;= stones[i] &lt;= 1000</code></p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n360" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def lastStoneWeight(self, stones) -&gt; int:
+        stones.sort(reverse=True)     
+       
+        i = 0
+        while len(stones) &gt; 1:
+            x = stones[i+1]
+            y = stones[i]
+            if x == y:
+                stones.remove(x)
+                stones.remove(y)
+            if x != y:
+                stones.remove(x)
+                stones.remove(y)
+                stones.append(y - x)
+            stones.sort(reverse=True)
+
+        if len(stones) &gt; 0:
+            return stones[0]
+        else:
+            return 0
+          
+s = Solution()
+print(s.lastStoneWeight([2,7,4,1,8,1]))
+print(s.lastStoneWeight([5,1,8,10,7]))
+</pre><h3><a name='header-n361' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/element-appearing-more-than-25-in-sorted-array/'>1287. 有序数组中出现次数超过25%的元素</a> [数组]</h3><p>给你一个非递减的 <strong>有序</strong> 整数数组，已知这个数组中恰好有一个整数，它的出现次数超过数组元素总数的 25%。</p><p>请你找到并返回这个整数</p><p><strong>示例：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n365" mdtype="fences">输入：arr = [1,2,2,6,6,6,6,7,10]
+输出：6
+</pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= arr.length &lt;= 10^4</code></li><li><code>0 &lt;= arr[i] &lt;= 10^5</code></li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n373" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def findSpecialInteger(self, arr) -&gt; int:
+        alen = len(arr) // 4
+        for e in arr:
+            if arr.count(e) &gt; alen:
+                return e
+s = Solution()
+print(s.findSpecialInteger(arr = [1,2,2,6,6,6,6,7,10])
+</pre><h3><a name='header-n374' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/valid-mountain-array/'>941. 有效的山脉数组</a> [数组]</h3><p>给定一个整数数组 <code>A</code>，如果它是有效的山脉数组就返回 <code>true</code>，否则返回 <code>false</code>。</p><p>让我们回顾一下，如果 A 满足下述条件，那么它是一个山脉数组：</p><ul><li><p><code>A.length &gt;= 3</code>； 在 <code>0 &lt; i &lt; A.length - 1</code> 条件下，存在 <code>i</code></p><p>使得：<code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i]</code>； <code>A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code></p></li></ul><p><img src='https://assets.leetcode.com/uploads/2019/10/20/hint_valid_mountain_array.png' alt='img' referrerPolicy='no-referrer' /></p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n383" mdtype="fences">输入：[2,1]
+输出：false
+输入：[3,5,5]
+输出：false
+输入：[0,3,2,1]
+输出：true
+</pre><p><strong>提示：</strong> <code>0 &lt;= A.length &lt;= 10000</code>；<code>0 &lt;= A[i] &lt;= 10000</code></p><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n386" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def validMountainArray(self, A) -&gt; bool:
+        i = 0
+        alen = len(A)
+        while i &lt; alen-1 and A[i] &lt; A[i + 1]:
+            i = i + 1
+        if i == 0:
+            return False
+        if i == alen-1:
+            return False
+        while i &lt; alen-1 and A[i] &gt; A[i + 1]:
+            i = i + 1
+        if i == alen - 1:
+            return True
+        else:
+            return False
+              
+s = Solution()
+print(s.validMountainArray([2, 1]))
+print(s.validMountainArray([3, 5, 5]))
+print(s.validMountainArray([0, 3, 2, 1]))
+</pre><h3><a name='header-n387' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/'>1281. 整数的各位积和之差</a> [数学]</h3><p>给你一个整数 <code>n</code>，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n390" mdtype="fences">输入：n = 234
+输出：15 
+解释：
+各位数之积 = 2 * 3 * 4 = 24 
+各位数之和 = 2 + 3 + 4 = 9 
+结果 = 24 - 9 = 15
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n392" mdtype="fences">输入：n = 4421
+输出：21
+解释： 
+各位数之积 = 4 * 4 * 2 * 1 = 32 
+各位数之和 = 4 + 4 + 2 + 1 = 11 
+结果 = 32 - 11 = 21
+</pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n398" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def subtractProductAndSum(self, n: int) -&gt; int:
+        from functools import reduce
+        nstr = str(n)
+        nint = list(map(int, nstr))
+        
+        pro = reduce(lambda x, y: x*y, nint)
+        su = reduce(lambda x, y: x+y, nint)       
+        return pro - su
+                
+s = Solution()
+print(s.subtractProductAndSum(234))
+print(s.subtractProductAndSum(4421))
+print(s.subtractProductAndSum(114))
+</pre><h3><a name='header-n399' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/fair-candy-swap/'>888. 公平的糖果交换</a> [数组]</h3><p>爱丽丝和鲍勃有不同大小的糖果棒：<code>A[i]</code> 是爱丽丝拥有的第 <code>i</code> 块糖的大小，<code>B[j]</code> 是鲍勃拥有的第 <code>j</code> 块糖的大小。</p><p>因为他们是朋友，所以他们想交换一个糖果棒，这样交换后，他们都有相同的糖果总量。<em>（一个人拥有的糖果总量是他们拥有的糖果棒大小的总和。）</em></p><p>返回一个整数数组 <code>ans</code>，其中 <code>ans[0]</code> 是爱丽丝必须交换的糖果棒的大小，<code>ans[1]</code> 是 Bob 必须交换的糖果棒的大小。</p><p>如果有多个答案，你可以返回其中任何一个。保证答案存在。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n405" mdtype="fences">输入：A = [1,1], B = [2,2]
+输出：[1,2]
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n407" mdtype="fences">输入：A = [1,2], B = [2,3]
+输出：[1,2]
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n409" mdtype="fences">输入：A = [2], B = [1,3]
+输出：[2,3]
+</pre><p><strong>示例 4：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n411" mdtype="fences">输入：A = [1,2,5], B = [2,4]
+输出：[5,4]
+</pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= A.length &lt;= 10000</code> ；<code>1 &lt;= B.length &lt;= 10000</code>；<code>1 &lt;= A[i] &lt;= 100000</code></li><li><code>1 &lt;= B[i] &lt;= 100000</code>；保证爱丽丝与鲍勃的糖果总量不同。；答案肯定存在。</li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n419" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+#    输入：A = [1,1], B = [2,2]
+#    输出：[1,2]
+    def fairCandySwap(self, A, B):
+        sa, sb = sum(A), sum(B)
+        diff = (sa - sb) / 2
+        A.sort()
+        B.sort()
+        i, j = 0, 0
+        
+        while A[i] - B[j] != diff:
+            if A[i] - B[j] &gt; diff:   # A[i] - B[j] &gt; diff: j++
+                j = j + 1
+            if A[i] - B[j] &lt; diff:
+                i = i + 1
+        
+        return [A[i], B[j]]
+
+s = Solution()
+print(s.fairCandySwap(A = [1,1], B = [2,2]))
+print(s.fairCandySwap(A = [1,2], B = [2,3]))
+print(s.fairCandySwap(A = [2], B = [1,3]))
+print(s.fairCandySwap(A = [1,2,5], B = [2,4]))
+</pre><h3><a name='header-n420' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/longest-palindrome/'>409. 最长回文串</a> [字符串]</h3><p>给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。</p><p>在构造过程中，请注意区分大小写。比如 <code>&quot;Aa&quot;</code> 不能当做一个回文字符串。</p><p><strong>注意:</strong>
+假设字符串的长度不会超过 1010。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n425" mdtype="fences">输入:
+"abccccdd"
+输出:
+7
+解释:
+我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n427" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def longestPalindrome(self, s: str) -&gt; int:
+        from collections import Counter
+        counter = Counter(s)                
+        
+        res, odd_flag = 0, 0   # 结果, 奇数次flag设置为0
+        for k, v in counter.items():
+            res += (v // 2) * 2  # 偶数则偶数次；奇数，则小于奇数的最大偶数
+            if v % 2 == 1:       # 有奇数，则最后再+1
+                odd_flag = 1
+                
+        return res + odd_flag
+    
+s = Solution()
+print(s.longestPalindrome("abccccdd"))
+print(s.longestPalindrome("ccc"))
+print(s.longestPalindrome("bananas"))
+</pre><h3><a name='header-n428' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/lemonade-change/'>860. 柠檬水找零</a> [数组]</h3><p>在柠檬水摊上，每一杯柠檬水的售价为 <code>5</code> 美元。</p><p>顾客排队购买你的产品，（按账单 <code>bills</code> 支付的顺序）一次购买一杯。</p><p>每位顾客只买一杯柠檬水，然后向你付 <code>5</code> 美元、<code>10</code> 美元或 <code>20</code> 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 <code>5</code> 美元。</p><p>注意，一开始你手头没有任何零钱。</p><p>如果你能给每位顾客正确找零，返回 <code>true</code> ，否则返回 <code>false</code> 。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n435" mdtype="fences">输入：[5,5,5,10,20]
+输出：true
+解释：
+前 3 位顾客那里，我们按顺序收取 3 张 5 美元的钞票。
+第 4 位顾客那里，我们收取一张 10 美元的钞票，并返还 5 美元。
+第 5 位顾客那里，我们找还一张 10 美元的钞票和一张 5 美元的钞票。
+由于所有客户都得到了正确的找零，所以我们输出 true。
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n437" mdtype="fences">输入：[5,5,10]
+输出：true
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n439" mdtype="fences">输入：[10,10]
+输出：false
+</pre><p><strong>示例 4：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n441" mdtype="fences">输入：[5,5,10,10,20]
+输出：false
+解释：
+前 2 位顾客那里，我们按顺序收取 2 张 5 美元的钞票。
+对于接下来的 2 位顾客，我们收取一张 10 美元的钞票，然后返还 5 美元。
+对于最后一位顾客，我们无法退回 15 美元，因为我们现在只有两张 10 美元的钞票。
+由于不是每位顾客都得到了正确的找零，所以答案是 false。
+</pre><p><strong>提示：</strong></p><ul><li><code>0 &lt;= bills.length &lt;= 10000</code></li><li><code>bills[i]</code> 不是 <code>5</code> 就是 <code>10</code> 或是 <code>20</code> </li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n449" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def lemonadeChange(self, bills) -&gt; bool:
+        five, ten = 0, 0
+        for b in bills:
+            if b == 5:
+                five += 1
+            elif b == 10:
+                if not five:
+                    return False
+                five -= 1
+                ten += 1
+            else:
+                if ten and five:
+                    ten -= 1
+                    five -= 1
+                elif five &gt; 2:
+                    five -= 3
+                else:
+                    return False
+        return True
+            
+s = Solution()
+
+print(s.lemonadeChange([5,5,5,10,20]))
+print(s.lemonadeChange([5,5,10,10,20]))
+</pre><h3><a name='header-n450' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/backspace-string-compare/'>844. 比较含退格的字符串</a> [字符串]</h3><p>给定 <code>S</code> 和 <code>T</code> 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 <code>#</code> 代表退格字符。</p><p><strong>注意：</strong>如果对空文本输入退格字符，文本继续为空。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n454" mdtype="fences">输入：S = "ab#c", T = "ad#c"
+输出：true
+解释：S 和 T 都会变成 “ac”。
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n456" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def backspaceCompare(self, S: str, T: str) -&gt; bool:
+        st1 = ''
+        st2 = ''
+        for e in S:
+            if e != '#':
+                st1 += e
+            else:
+                st1 = st1[:-1]
+        for e in T:
+            if e != '#':
+                st2 += e
+            else:
+                st2 = st2[:-1]
+                
+        if st1 == st2:
+            return True
+        else:
+            return False
+    
+s = Solution()
+print(s.backspaceCompare(S = "ab##", T = "c#d#"))
+</pre><h3><a name='header-n457' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/number-of-burgers-with-no-waste-of-ingredients/'>1276. 不浪费原料的汉堡制作方案</a> 【贪心]</h3><p>圣诞活动预热开始啦，汉堡店推出了全新的汉堡套餐。为了避免浪费原料，请你帮他们制定合适的制作计划。</p><p>给你两个整数 <code>tomatoSlices</code> 和 <code>cheeseSlices</code>，分别表示番茄片和奶酪片的数目。不同汉堡的原料搭配如下：</p><ul><li><strong>巨无霸汉堡：</strong>4 片番茄和 1 片奶酪</li><li><strong>小皇堡：</strong>2 片番茄和 1 片奶酪</li></ul><p>请你以 <code>[total_jumbo, total_small]</code>（[巨无霸汉堡总数，小皇堡总数]）的格式返回恰当的制作方案，使得剩下的番茄片 <code>tomatoSlices</code> 和奶酪片 <code>cheeseSlices</code> 的数量都是 <code>0</code>。</p><p>如果无法使剩下的番茄片 <code>tomatoSlices</code> 和奶酪片 <code>cheeseSlices</code> 的数量为 <code>0</code>，就请返回 <code>[]</code>。</p><p><strong>示例：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n468" mdtype="fences" style="break-inside: unset;">示例 1：
+输入：tomatoSlices = 16, cheeseSlices = 7
+输出：[1,6]
+解释：制作 1 个巨无霸汉堡和 6 个小皇堡需要 4*1 + 2*6 = 16 片番茄和 1 + 6 = 7 片奶酪。不会剩下原料。
+
+示例 2：
+输入：tomatoSlices = 17, cheeseSlices = 4
+输出：[]
+解释：只制作小皇堡和巨无霸汉堡无法用光全部原料。
+
+示例 3：
+输入：tomatoSlices = 4, cheeseSlices = 17
+输出：[]
+解释：制作 1 个巨无霸汉堡会剩下 16 片奶酪，制作 2 个小皇堡会剩下 15 片奶酪。
+
+示例 4：
+输入：tomatoSlices = 0, cheeseSlices = 0
+输出：[0,0]
+
+示例 5：
+输入：tomatoSlices = 2, cheeseSlices = 1
+输出：[0,1]
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n470" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def numOfBurgers(self, tomatoSlices: int, cheeseSlices: int):        
+        low, high = 0, tomatoSlices // 4     
+#        巨无霸汉堡：4 片番茄和 1 片奶酪
+#        小皇堡：2 片番茄和 1 片奶酪
+        while low &lt;= high:
+            mid = (low + high) // 2   
+            # 巨无霸 的 数据比
+            tomatos, cheeses = tomatoSlices - mid*4, cheeseSlices - mid
+            
+            # 符合 小皇煲 的 数据比
+            if tomatos == cheeses*2:        
+                return [mid, cheeses]   
+            elif tomatos &gt; cheeses*2:
+                low = mid + 1
+            else:
+                high = mid - 1
+        return []
+
+s = Solution()
+#print(s.numOfBurgers(tomatoSlices = 48, cheeseSlices = 16))
+print(s.numOfBurgers(tomatoSlices = 16, cheeseSlices = 7))
+#print(s.numOfBurgers(tomatoSlices = 17, cheeseSlices = 4)) 
+</pre><h3><a name='header-n471' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/ugly-number/'>263. 丑数</a> [数学]</h3><p>编写一个程序判断给定的数是否为丑数。</p><p>丑数就是只包含质因数 <code>2, 3, 5</code> 的<strong>正整数</strong>。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n475" mdtype="fences">输入: 6
+输出: true
+解释: 6 = 2 × 3
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n477" mdtype="fences">输入: 8
+输出: true
+解释: 8 = 2 × 2 × 2
+</pre><p><strong>示例 3:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n479" mdtype="fences">输入: 14
+输出: false 
+解释: 14 不是丑数，因为它包含了另外一个质因数 7。
+</pre><p><strong>说明：</strong></p><ol start='' ><li><code>1</code> 是丑数。</li><li>输入不会超过 32 位有符号整数的范围: [−231,  231 − 1]。</li></ol><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n486" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def isUgly(self, num: int) -&gt; bool:
+        if num == 0:
+            return False
+        if num == 1:
+            return True
+        elif num % 2 == 0:
+            return self.isUgly(num // 2)
+        elif num % 3 == 0:
+            return self.isUgly(num // 3)
+        elif num % 5 == 0:
+            return self.isUgly(num // 5)
+        else:
+            return False
+        
+s = Solution()
+print(s.isUgly(6))
+print(s.isUgly(8))
+print(s.isUgly(14))
+</pre><h3><a name='header-n487' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/maximum-product-of-three-numbers/'>628. 三个数的最大乘积</a>[数组]</h3><p>给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n490" mdtype="fences">输入: [1,2,3]
+输出: 6
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n492" mdtype="fences">输入: [1,2,3,4]
+输出: 24
+</pre><p><strong>注意:</strong></p><ol start='' ><li>给定的整型数组长度范围是[3,104]，数组中所有的元素范围是[-1000, 1000]。</li><li>输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n500" mdtype="fences"># -*- coding: utf-8 -*-
+class Solution:
+    def maximumProduct(self, nums) -&gt; int:
+        nums.sort()
+        return max(nums[-1]*nums[-2]*nums[-3],nums[-1]*nums[0]*nums[1])
+    
+s = Solution()
+print(s.maximumProduct([-4,-3,-2,-1,60]))
+print(s.maximumProduct([-1,-2,1,2,3]))
+</pre><h3><a name='header-n501' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/goat-latin/'>824. 山羊拉丁文</a> [字符串]</h3><p>给定一个由空格分割单词的句子 <code>S</code>。每个单词只包含大写或小写字母。</p><p>我们要将句子转换为 <em>“Goat Latin”</em>（一种类似于 猪拉丁文 - Pig Latin 的虚构语言）。</p><p>山羊拉丁文的规则如下：</p><ul><li>如果单词以元音开头（a, e, i, o, u），在单词后添加<code>&quot;ma&quot;</code>。
+例如，单词<code>&quot;apple&quot;</code>变为<code>&quot;applema&quot;</code>。</li><li>如果单词以辅音字母开头（即非元音字母），移除第一个字符并将它放到末尾，之后再添加<code>&quot;ma&quot;</code>。
+例如，单词<code>&quot;goat&quot;</code>变为<code>&quot;oatgma&quot;</code>。</li><li>根据单词在句子中的索引，在单词最后添加与索引相同数量的字母<code>&#39;a&#39;</code>，索引从1开始。
+例如，在第一个单词后添加<code>&quot;a&quot;</code>，在第二个单词后添加<code>&quot;aa&quot;</code>，以此类推。</li></ul><p>返回将 <code>S</code> 转换为山羊拉丁文后的句子。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n514" mdtype="fences">输入: "I speak Goat Latin"
+输出: "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n516" mdtype="fences">输入: "The quick brown fox jumped over the lazy dog"
+输出: "heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa"
+</pre><p><strong>说明:</strong></p><ul><li><code>S</code> 中仅包含大小写字母和空格。单词间有且仅有一个空格。</li><li><code>1 &lt;= S.length &lt;= 150</code>。</li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n524" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+
+class Solution:
+    def toGoatLatin(self, S: str) -&gt; str:
+        res = []
+        S = S.split()
+        cnt = 1
+        for e in S:
+            if e[0].lower() in ['a','e','i', 'o', 'u']:
+                res.append(e + 'ma' + cnt*'a')
+            else:
+                res.append(e[1:] + e[0] + 'ma' + cnt*'a')
+            cnt = cnt + 1
+        return ' '.join(res)
+    
+s = Solution()
+print(s.toGoatLatin("I speak Goat Latin"))
+print(s.toGoatLatin("The quick brown fox jumped over the lazy dog"))
+</pre><h3><a name='header-n525' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/long-pressed-name/'>925. 长按键入</a> [字符串]</h3><p>你的朋友正在使用键盘输入他的名字 <code>name</code>。偶尔，在键入字符 <code>c</code> 时，按键可能会被<em>长按</em>，而字符可能被输入 1 次或多次。</p><p>你将会检查键盘输入的字符 <code>typed</code>。如果它对应的可能是你的朋友的名字（其中一些字符可能被长按），那么就返回 <code>True</code>。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n529" mdtype="fences">输入：name = "alex", typed = "aaleex"
+输出：true
+解释：'alex' 中的 'a' 和 'e' 被长按。
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n531" mdtype="fences">输入：name = "saeed", typed = "ssaaedd"
+输出：false
+解释：'e' 一定需要被键入两次，但在 typed 的输出中不是这样。
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n533" mdtype="fences">输入：name = "leelee", typed = "lleeelee"
+输出：true
+</pre><p><strong>示例 4：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n535" mdtype="fences">输入：name = "laiden", typed = "laiden"
+输出：true
+解释：长按名字中的字符并不是必要的。
+</pre><p><strong>提示：</strong></p><ol start='' ><li><code>name.length &lt;= 1000</code></li><li><code>typed.length &lt;= 1000</code></li><li><code>name</code> 和 <code>typed</code> 的字符都是小写字母。</li></ol><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n544" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def isLongPressedName(self, name: str, typed: str) -&gt; bool:
+         charSetN = set(name)
+         charSetT = set(typed)
+         for item in charSetN:
+             if item not in charSetT:
+                 return False
+         for item in charSetT:
+            if item not in charSetN:
+                return False
+        
+         i, j = 0, 0
+         while i &lt; len(name) and j &lt; len(typed):
+             if name[i] == typed[j]:
+                i += 1
+                j += 1
+             else:
+                 if j &gt; 0 and typed[j] == typed[j-1]:
+                     j += 1
+                 else:
+                     return False
+         if i == len(name):   # 所有name都用完了
+             return True
+         else:
+             return False
+        
+s = Solution()
+print(s.isLongPressedName(name = "alex", typed = "aaleex"))
+print(s.isLongPressedName(name = "saeed", typed = "ssaaedd"))
+print(s.isLongPressedName('abc', 'aaxbc'))
+print(s.isLongPressedName("zlexya", "aazlllllllllllllleexxxxxxxxxxxxxxxya"))
+</pre><h3><a name='header-n545' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/distance-between-bus-stops/'>1184. 公交站间的距离</a> [数组]</h3><p>环形公交路线上有 <code>n</code> 个站，按次序从 <code>0</code> 到 <code>n - 1</code> 进行编号。我们已知每一对相邻公交站之间的距离，<code>distance[i]</code> 表示编号为 <code>i</code> 的车站和编号为 <code>(i + 1) % n</code> 的车站之间的距离。</p><p>环线上的公交车都可以按顺时针和逆时针的方向行驶。</p><p>返回乘客从出发点 <code>start</code> 到目的地 <code>destination</code> 之间的最短距离。</p><p><strong>示例 1：</strong></p><p><img src='https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/08/untitled-diagram-1.jpg' alt='img' referrerPolicy='no-referrer' /></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n551" mdtype="fences">输入：distance = [1,2,3,4], start = 0, destination = 1
+输出：1
+解释：公交站 0 和 1 之间的距离是 1 或 9，最小值是 1。
+</pre><p><strong>示例 2：</strong></p><p><img src='https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/08/untitled-diagram-1-1.jpg' alt='img' referrerPolicy='no-referrer' /></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n554" mdtype="fences">输入：distance = [1,2,3,4], start = 0, destination = 2
+输出：3
+解释：公交站 0 和 2 之间的距离是 3 或 7，最小值是 3。
+</pre><p><strong>示例 3：</strong></p><p><img src='https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/09/08/untitled-diagram-1-2.jpg' alt='img' referrerPolicy='no-referrer' /></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n557" mdtype="fences">输入：distance = [1,2,3,4], start = 0, destination = 3
+输出：4
+解释：公交站 0 和 3 之间的距离是 6 或 4，最小值是 4。
+</pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= n &lt;= 10^4</code></li><li><code>distance.length == n</code></li><li><code>0 &lt;= start, destination &lt; n</code></li><li><code>0 &lt;= distance[i] &lt;= 10^4</code></li></ul><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n569" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def distanceBetweenBusStops(self, distance, start: int, destination: int) -&gt; int:
+        forward = 0
+        backward = 0 
+        dlen = len(distance)       
+        for i in range(0, dlen):
+            forward += distance[(start + i) % dlen]
+            if (start + i + 1) % dlen == destination:
+                break       
+        for i in range(0, dlen):
+            backward += distance[(start + dlen - i - 1) % dlen]
+            if (start + dlen - i - 1) % dlen == destination:
+                break
+        return forward if forward &lt; backward else backward
+                
+s = Solution()
+print(s.distanceBetweenBusStops(distance = [1,2,3,4], start = 0, destination = 1))
+print(s.distanceBetweenBusStops(distance = [1,2,3,4], start = 0, destination = 3))
+</pre><h3><a name='header-n570' class='md-header-anchor '></a>35. 二分算法</h3><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n571" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def searchInsert(self, nums, target: int) -&gt; int:
+        nlen = len(nums)
+        if nlen == 0:
+            return 0
+        if target &lt; nums[0]:
+            return 0
+        if target &gt; nums[nlen - 1]:
+            return nlen
+        low, high = 0, nlen - 1
+        while low &lt;= high:
+            mid = (low + high) // 2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] &gt; target:
+                high = mid - 1
+            else:
+                high = mid + 1               
+        return low
+         
+s = Solution()
+#print(s.searchInsert([1,3,5,6], 5))
+#print(s.searchInsert([1,3,5,6], 7))
+print(s.searchInsert([1], 0))
+</pre><h3><a name='header-n572' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/word-pattern/'>290. 单词规律</a> [字符串]</h3><p>给定一种规律 <code>pattern</code> 和一个字符串 <code>str</code> ，判断 <code>str</code> 是否遵循相同的规律。</p><p>这里的 <strong>遵循</strong> 指完全匹配，例如， <code>pattern</code> 里的每个字母和字符串 <code>str</code> 中的每个非空单词之间存在着双向连接的对应规律。</p><p><strong>示例1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n576" mdtype="fences">输入: pattern = "abba", str = "dog cat cat dog"
+输出: true
+</pre><p><strong>示例 2:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n578" mdtype="fences">输入:pattern = "abba", str = "dog cat cat fish"
+输出: false
+</pre><p><strong>示例 3:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n580" mdtype="fences">输入: pattern = "aaaa", str = "dog cat cat dog"
+输出: false
+</pre><p><strong>示例 4:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n582" mdtype="fences">输入: pattern = "abba", str = "dog dog dog dog"
+输出: false
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n584" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+
+class Solution:
+    def wordPattern(self, pattern: str, str1: str) -&gt; bool:
+        pli = list(pattern)
+        sli = str1.split()
+        plen = len(pli)
+        slen = len(sli)
+        if plen != slen:
+            return False
+        for i in range(slen):
+            if pli.index(pli[i]) != sli.index(sli[i]):
+                return False
+        return True
+    
+s = Solution()
+print(s.wordPattern("abba", "dog cat cat dog"))
+print(s.wordPattern("aaa", "aa aa aa aa"))
+</pre><h3><a name='header-n585' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/x-of-a-kind-in-a-deck-of-cards/'>914. 卡牌分组</a>[数组]</h3><p>给定一副牌，每张牌上都写着一个整数。</p><p>此时，你需要选定一个数字 <code>X</code>，使我们可以将整副牌按下述规则分成 1 组或更多组：</p><ul><li>每组都有 <code>X</code> 张牌。</li><li>组内所有的牌上都写着相同的整数。</li></ul><p>仅当你可选的 <code>X &gt;= 2</code> 时返回 <code>true</code>。</p><p><strong>示例 1：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n595" mdtype="fences">输入：[1,2,3,4,4,3,2,1]
+输出：true
+解释：可行的分组是 [1,1]，[2,2]，[3,3]，[4,4]
+</pre><p><strong>示例 2：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n597" mdtype="fences">输入：[1,1,1,2,2,2,3,3]
+输出：false
+解释：没有满足要求的分组。
+</pre><p><strong>示例 3：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n599" mdtype="fences">输入：[1]
+输出：false
+解释：没有满足要求的分组。
+</pre><p><strong>示例 4：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n601" mdtype="fences">输入：[1,1]
+输出：true
+解释：可行的分组是 [1,1]
+</pre><p><strong>示例 5：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n603" mdtype="fences">输入：[1,1,2,2,2,2]
+输出：true
+解释：可行的分组是 [1,1]，[2,2]，[2,2]
+**提示：**
+</pre><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n605" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def hasGroupsSizeX(self, deck) -&gt; bool:
+        import math
+        dlen = len(deck)        
+        if dlen &lt; 2:
+            return False
+
+        cnt = [deck.count(e) for e in deck]
+
+        mygcd = 9999999
+        for i in range(dlen - 1):
+            t = math.gcd(cnt[i], cnt[i + 1])
+            if mygcd &gt; t:
+                mygcd = t
+        
+        if mygcd == 1:
+            return False
+        
+        for i in range(dlen - 1):
+            if cnt[i] % mygcd != 0:
+                return False
+        return True
+    
+s = Solution()
+print(s.hasGroupsSizeX([1,2,3,4,4,3,2,1]))
+print(s.hasGroupsSizeX([1,1,2,2,2,2]))
+print(s.hasGroupsSizeX([1,1,1,1,2,2,2,2,2,2]))
+</pre><h3><a name='header-n606' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/set-mismatch/'>645. 错误的集合</a>[数组]</h3><p>集合 <code>S</code> 包含从1到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个元素复制了成了集合里面的另外一个元素的值，导致集合丢失了一个整数并且有一个元素重复。</p><p>给定一个数组 <code>nums</code> 代表了集合 <code>S</code> 发生错误后的结果。你的任务是首先寻找到重复出现的整数，再找到丢失的整数，将它们以数组的形式返回。</p><p><strong>示例 1:</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n610" mdtype="fences">输入: nums = [1,2,2,4]
+输出: [2,3]
+</pre><p><strong>注意:</strong></p><ol start='' ><li>给定数组的长度范围是 [2, 10000]。</li><li>给定的数组是无序的。</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n618" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+class Solution:
+    def findErrorNums(self, nums):
+        ans = []
+        nlen = len(nums)
+        
+        counts = [0]*(nlen+1)
+        for e in nums:
+            counts[e] += 1
+        
+        print(counts)
+        for i in range(1, nlen+1):
+            if counts[i] == 0:
+                if len(ans) &lt; 1:
+                    ans.append(i)
+                else:
+                    ans.append(i)
+                    break
+            elif counts[i] == 2:
+                if len(ans) &lt; 1:
+                    ans.append(i)
+                else:
+                    ans.append(i)
+                    break
+                    
+        if counts[ans[0]] &gt; 1:
+            return ans
+        else:
+            return ans[::-1]
+        
+s = Solution()
+print(s.findErrorNums([3,2,3,4,6,5]))
+</pre><h3><a name='header-n619' class='md-header-anchor '></a><a href='https://leetcode-cn.com/problems/subarray-sum-equals-k/'>560. 和为K的子数组</a>[数组 哈希表]</h3><p>给定一个整数数组和一个整数 <strong>k，</strong>你需要找到该数组中和为 <strong>k</strong> 的连续的子数组的个数。</p><p><strong>示例 1 :</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="" contenteditable="false" cid="n622" mdtype="fences">输入:nums = [1,1,1], k = 2
+输出: 2 , [1,1] 与 [1,1] 为两种不同的情况。
+</pre><p><strong>说明 :</strong></p><ol start='' ><li>数组的长度为 [1, 20,000]。</li><li>数组中元素的范围是 [-1000, 1000] ，且整数 <strong>k</strong> 的范围是 [-1e7, 1e7]。</li></ol><p><strong>代码：</strong></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="python" contenteditable="false" cid="n630" mdtype="fences" style="break-inside: unset;"># -*- coding: utf-8 -*-
+
+class Solution:
+    def subarraySum(self, nums, k: int) -&gt; int:
+        ans = 0
+        sum = 0
+        hash = {0 : 1}
+        nlen = len(nums)
+        for i in range(nlen):
+            sum += nums[i]
+            if ((sum - k) in hash):
+                ans += hash[sum - k]     # +1
+            if (sum in hash):            # sum == 0
+                hash[sum] += 1           # 如果sum 能加出 hash中的key， 则对应key的value+1
+            else:
+                hash[sum] = 1
+
+        return ans
+    
+s = Solution()
+print(s.subarraySum(nums = [1,1,1], k = 2))
+print(s.subarraySum([28,54,7,-70,22,65,-6], 100))
+</pre><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

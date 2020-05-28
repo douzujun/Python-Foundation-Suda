@@ -1,0 +1,6 @@
+'document_3.txt' has been writen
+this is second line of "document_1.txt" .
+word
+line 4
+line 5
+line 6

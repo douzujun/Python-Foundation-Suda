@@ -1,0 +1,14 @@
+Tom,0,78,88
+Alice,1,78,88
+Mike,0,55,68
+Jerry,0,95,68
+Astroboy,0,45,98
+DORAEMON,1,88,99
+SnowWhite,1,65,105
+Curry,0,65,48
+James,0,60,60
+Harden,0,34,60
+Thompso,0,-1,80
+
+
+

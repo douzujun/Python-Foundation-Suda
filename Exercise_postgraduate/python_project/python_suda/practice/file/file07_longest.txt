@@ -1,0 +1,7 @@
+The constructor is used to initialize the object 
+The destructor 
+is used 
+to
+delete the Object the
+calling seqence of constructor is opposite 
+calling sequence of destructor

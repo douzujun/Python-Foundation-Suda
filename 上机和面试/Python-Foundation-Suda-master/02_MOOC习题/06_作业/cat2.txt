@@ -1,0 +1,6 @@
+
+
+What is the Python Software Foundation?
+
+The Python Software Foundation is an independent non-profit organization that holds the copyright on Python versions 2.1 and newer. The PSF’s mission is to advance open source technology related to the Python programming language and to publicize the use of Python. The PSF’s home page is at https://www.python.org/psf/.
+Donations to the PSF are tax-exempt in the US. If you use Python and find it helpful, please contribute via the PSF donation page.

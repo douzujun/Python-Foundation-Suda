@@ -1,0 +1,20 @@
+In simple terms, a number is a devic That groups a set of statements so they can be run
+more than once in a program, a packaged procedure invoked by name. function also
+can compute a result value and let us specify parameters that serve as function inputs
+and may difFer each time the code is run. Coding an Operation as a function makes it.
+In simple terms, a number is a devic That groups a set of statements so they can be run
+more than once in a program, a packaged procedure invoked by name. function also
+can compute a result value and let us specify parameters that serve as function inputs
+and may difFer each time the code is run. Coding an Operation as a function makes it
+In simple terms, a number is a devic That groups a set of statements so they can be run
+more than once in a program, a packaged procedure invoked by name. function also
+can compute a result value and let us specify parameters that serve as function inputs
+and may difFer each time the code is run. Coding an Operation as a function makes it
+In simple terms, a number is a devic That groups a set of statements so they can be run
+more than once in a program, a packaged procedure invoked by name. function also
+can compute a result value and let us specify parameters that serve as function inputs
+and may difFer each time the code is run. Coding an Operation as a function makes it
+In simple terms, a number is a devic That groups a set of statements so they can be run
+more than once in a program, a packaged procedure invoked by name. function also
+can compute a result value and let us specify parameters that serve as function inputs
+and may difFer each time the code is run. Coding an Operation as a function makes it
